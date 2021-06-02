@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesom -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Movies Club</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header id="home">
+      <!-- Navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <a href="/" id="navbar-logo"> MoviesClub</a>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#popular" class="scroll-link">Popular</a>
+              </li>
+              <li>
+                <a href="#upcoming" class="scroll-link">Upcoming</a>
+              </li>
+              <li>
+                <a href="#top" class="scroll-link">Top Rated</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>Movies Club</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus similique maiores odit iusto, veniam quis tempora
+            perferendis atque vitae totam.
+          </p>
+          <form class="form-group">
+            <input
+              type="text"
+              id="input-value"
+              placeholder="Search a Movie"
+            /><button type="submit" class="submit-btn" id="search">
+              Search
+            </button>
+          </form>
+        </div>
+        <section>
+          <div id="movies-search"></div>
+        </section>
+      </div>
+    </header>
+    <!-- popular -->
+    <section id="popular" class="section">
+      <div class="popular">
+        <div class="title">
+          <h2>Popular Movies</h2>
+        </div>
+        <div id="popular-movies"></div>
+      </div>
+    </section>
+    <!-- upcoming -->
+    <section id="upcoming" class="section">
+      <div class="upcoming">
+        <div class="title">
+          <h2>Upcoming Movies</h2>
+        </div>
+        <div id="upcoming-movies"></div>
+      </div>
+    </section>
+    <!-- top -->
+    <section id="top" class="section">
+      <div class="top">
+        <div class="title">
+          <h2>Top Rated Movies</h2>
+        </div>
+        <div id="top-rated"></div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; movies club company <span id="date"></span>
+        .all rights reserved
+      </p>
+    </footer>
+    <!-- back to top -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="./js/apiTransaction.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
