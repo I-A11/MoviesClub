@@ -100,6 +100,7 @@ const createMovieContainer = (movies) => {
   return movieElement;
 };
 
+//search movies
 const renderSearchMovies = (data) => {
   // data.result
   movieSearch.innerHTML = "";
@@ -109,13 +110,16 @@ const renderSearchMovies = (data) => {
   console.log("Data", data);
 };
 
-const renderMovies = (data) => {
+// upcoming movies
+const renderUpcomingMovies = (data) => {
   // data.result
 
   const movies = data.results;
   const movieBlock = createMovieContainer(movies);
   upcomingMovies.appendChild(movieBlock);
 };
+
+//top movies
 const topMovies = (data) => {
   // data.result
 
@@ -123,7 +127,9 @@ const topMovies = (data) => {
   const movieBlock = createMovieContainer(movies);
   topRatedMovies.appendChild(movieBlock);
 };
-const renderTopMovies = (data) => {
+
+// popular movies
+const renderpopularMovies = (data) => {
   // data.result
 
   const movies = data.results;

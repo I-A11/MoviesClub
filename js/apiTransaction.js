@@ -1,4 +1,5 @@
 // Initial Values
+
 const API_KEY = "b02fc998ab7b3ee7ec0f3d939a335148";
 
 const url = `https://api.themoviedb.org/3/search/movie?api_key=b02fc998ab7b3ee7ec0f3d939a335148`;
@@ -22,19 +23,23 @@ const searchMovie = (value) => {
   requestMovies(url, renderSearchMovies, handleError);
 };
 
+//upcoming movies
 const getUpcomingMovies = () => {
-  const path = "/movie/top_rated";
+  const path = "/movie/upcoming";
   const url = generateUrl(path);
-  requestMovies(url, renderMovies, handleError);
+  requestMovies(url, renderUpcomingMovies, handleError);
 };
 
+//top rated movies
 const getTopRatedMovies = () => {
-  const path = "/movie/upcoming";
+  const path = "/movie/top_rated";
   const url = generateUrl(path);
   requestMovies(url, topMovies, handleError);
 };
+
+// popular movies
 const getPopularMovies = () => {
   const path = "/movie/popular";
   const url = generateUrl(path);
-  requestMovies(url, renderTopMovies, handleError);
+  requestMovies(url, renderpopularMovies, handleError);
 };
