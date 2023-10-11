@@ -74,14 +74,16 @@ scrollLinks.forEach((link) => {
 //movies section functions
 
 let movieSection = (movies) => {
-  return movies.map((movie) => {
-    if (movie.poster_path) {
-      return `<img
+  return movies
+    .map((movie) => {
+      if (movie.poster_path) {
+        return `<img
       src=${image_url + movie.poster_path}
       alt=${name}
       data-movie-id=${movie.id}/>`;
-    }
-  });
+      }
+    })
+    .join(" ");
 };
 const createMovieContainer = (movies) => {
   const movieElement = document.createElement("div");
